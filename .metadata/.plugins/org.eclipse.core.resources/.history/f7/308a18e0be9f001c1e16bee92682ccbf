@@ -1,0 +1,15 @@
+package ie.gmit.sw;
+
+import java.time.LocalDate;
+import java.time.Month;
+
+public class Runner
+{
+	public static void main(String[] args) throws Exception
+	{
+		LocalDate i = new LocalDate(1914, Month.JULY, 28);
+		LocalDate j = new LocalDate(1914, Month.JULY, 28);
+
+		System.out.println(i == j);
+	}
+}

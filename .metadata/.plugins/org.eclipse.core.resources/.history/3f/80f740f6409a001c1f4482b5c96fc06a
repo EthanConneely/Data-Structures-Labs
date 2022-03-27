@@ -1,0 +1,42 @@
+package ie.gmit.sw;
+
+import java.text.DecimalFormat;
+import java.time.LocalDate;
+import java.util.Comparator;
+import java.util.PriorityQueue;
+import java.util.Queue;
+import java.util.Set;
+
+public class Runner
+{
+	public static void main(String[] args) throws Exception
+	{
+		DecimalFormat formatter = new DecimalFormat("#,###.00"); // Formats the time output
+		Dictionary d = new Dictionary();
+		d.load();
+
+		String[] words = d.getSortedWords();
+		long start = System.currentTimeMillis(); // Start the clock
+
+		// Start adding code here:
+//		Queue<String> queue = new PriorityQueue<>();
+		Queue<Ninja> queue = new PriorityQueue<>(Comparator.comparing(Ninja::level).reversed());
+
+		for (int i = 0; i < words.length; i++)
+		{
+			Ninja n = new Ninja(words[i], i, LocalDate.now());
+			queue.offer(n);
+		}
+
+		Set<Ninja> ninjas = new HashSet<Ninja>();
+		
+		while (!queue.isEmpty())
+		{
+			Ninja n = queue.poll();
+			System.out.println(n);
+		}
+
+		// Output the formatted time
+		System.out.println("Time (ms):  " + formatter.format((System.currentTimeMillis() - start)));
+	}
+}

@@ -1,0 +1,14 @@
+package ie.gmit.sw;
+
+import java.time.LocalDate;
+
+public class Runner
+{
+	public static void main(String[] args) throws Exception
+	{
+		Float i = Float.valueOf(3.14f);
+		Float j = Float.valueOf(3.14f);
+
+		System.out.println(i == j);
+	}
+}

@@ -1,0 +1,13 @@
+package ie.gmit.sw;
+
+
+public class Runner
+{
+	public static void main(String[] args) throws Exception
+	{
+		LocalDate i = new LocalDate.of(1914, Month.JULY, 28);
+		LocalDate j = new LocalDate.of(1914, Month.JULY, 28);
+
+		System.out.println(i == j);
+	}
+}

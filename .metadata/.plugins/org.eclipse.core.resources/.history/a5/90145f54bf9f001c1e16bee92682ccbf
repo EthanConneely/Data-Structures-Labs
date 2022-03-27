@@ -1,0 +1,12 @@
+package ie.gmit.sw;
+
+public class Runner
+{
+	public static void main(String[] args) throws Exception
+	{
+		Double i = Double.valueOf(1111111111111111L);
+		Double j = Double.valueOf(1111111111111111L);
+
+		System.out.println(i == j);
+	}
+}

@@ -1,0 +1,13 @@
+package ie.gmit.sw;
+
+public class Runner
+{
+	public static void main(String[] args) throws Exception
+	{
+		float i = 3.14f;
+		float j = 3.14f;
+
+		System.out.println("test");
+		System.out.println(i == j);
+	}
+}
